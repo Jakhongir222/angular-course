@@ -2,7 +2,20 @@
 
 <div>
   <h1>Welcome to {{title}}</h1>
-  <img (click)="onLogoClick()" src="logo.png" alt="logo"/>
+  <img class="logo" 
+  (click)="onLogoClick()"
+  src="https://angular-academy.s3.amazonaws.com/main-logo/main-page-logo-small-hat.png">
+</div>
+
+<input (keyup)="onKeyUp(titleInput.value)" class="demo" [value]="title" #titleInput>
+
+<h2>{{coreCourse.description}}</h2>
+
+
+<div class="courses">
+
+  <app-course-card [course]="coreCourse"></app-course-card>
+  <app-course-card [course]="rxjsCourse"></app-course-card>
+  <app-course-card [course]="ngrxCourse"></app-course-card>
 
 </div>
-<input (keyup)="onKeyUp(titleInput.value)" class="demo" [value]="title" #titleInput>

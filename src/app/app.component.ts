@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { COURSES } from './db-data';
 
 @Component({
   selector: 'app-root',
@@ -17,6 +18,12 @@ export class AppComponent {
     this.title = newTitle;
 
   }
+
+  coreCourse = COURSES[0];
+
+  rxjsCourse = COURSES[1];
+  
+  ngrxCourse = COURSES[2];
 
 }
 
