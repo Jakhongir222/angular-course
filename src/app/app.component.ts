@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Course } from './course-card/course';
 import { COURSES } from './db-data';
 
 @Component({
@@ -24,6 +25,10 @@ export class AppComponent {
   rxjsCourse = COURSES[1];
   
   ngrxCourse = COURSES[2];
+
+  onCourseSelected(course: Course){
+    console.log("Course selected" , course);
+  }
 
 }
 
