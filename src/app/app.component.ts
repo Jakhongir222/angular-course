@@ -20,11 +20,9 @@ export class AppComponent {
 
   }
 
-  coreCourse = COURSES[0];
+  courses= COURSES;
 
-  rxjsCourse = COURSES[1];
-  
-  ngrxCourse = COURSES[2];
+
 
   onCourseSelected(course: Course){
     console.log("Course selected" , course);

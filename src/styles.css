@@ -1,1 +1,14 @@
 /* You can add global styles to this file, and also import other style files */
+.courses app-course-card.is-first {
+    border-top: 2px solid grey;
+    padding-top: 20px;
+    background-color: aqua;
+  }
+  
+app-course-card.is-last {
+    border-top: 2px solid grey;
+    padding-top: 20px;
+  }
+
+ 
+  

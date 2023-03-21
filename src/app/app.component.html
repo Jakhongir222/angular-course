@@ -9,13 +9,15 @@
 
 <input (keyup)="onKeyUp(titleInput.value)" class="demo" [value]="title" #titleInput>
 
-<h2>{{coreCourse.description}}</h2>
 
 
 <div class="courses">
 
-  <app-course-card (courseSelected)="onCourseSelected($event)" [course]="coreCourse"></app-course-card>
-  <app-course-card (courseSelected)="onCourseSelected($event)" [course]="rxjsCourse"></app-course-card>
-  <app-course-card (courseSelected)="onCourseSelected($event)" [course]="ngrxCourse"></app-course-card>
+  <app-course-card *ngFor="let course of courses; index as i; first as isFirst; last as isLast"
+  [class.is-first]="isFirst"
+  [class.is-last]="isLast"
+
+  (courseSelected)="onCourseSelected($event)" 
+  [course]="course" [cardIndex]="i+1"></app-course-card>
 
 </div>
